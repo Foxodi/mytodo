@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1e3a5f" />
+  <title>My Todo List</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>My Todo List</h1>
+  <p id="status" class="status"></p>
+
+  <section id="login" class="login">
+    <p>Enter the server token to open your list on this phone or browser.</p>
+    <div class="row">
+      <input id="token" type="password" placeholder="Token" autocomplete="off" />
+      <button class="primary" id="save-token">Open</button>
+    </div>
+  </section>
+
+  <section id="app" class="hidden">
+    <div class="row">
+      <input id="new-text" placeholder="New task…" />
+      <input id="new-due" type="date" />
+      <button class="primary" id="add">Add</button>
+    </div>
+    <div class="row">
+      <label><input type="checkbox" id="new-cal" /> Calendar</label>
+      <label><input type="checkbox" id="new-passive" /> Passive</label>
+      <select id="new-pri">
+        <option value="0">☆</option>
+        <option value="1">★</option>
+        <option value="2">★★</option>
+        <option value="3" selected>★★★</option>
+      </select>
+      <button id="reload">Reload</button>
+      <button id="logout">Log out</button>
+    </div>
+    <div class="filters">
+      <label><input type="checkbox" id="f-due" checked /> Due</label>
+      <label><input type="checkbox" id="f-notdue" checked /> Not due</label>
+      <label><input type="checkbox" id="f-passive" checked /> Passive</label>
+      <label><input type="checkbox" id="f-active" checked /> Active</label>
+      <label><input type="checkbox" id="f-cal" checked /> Calendar</label>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

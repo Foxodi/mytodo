@@ -1,0 +1,38 @@
+:root {
+  --bg: #111113;
+  --card: #1c1c1f;
+  --line: #2a2a2e;
+  --text: #e8e8ea;
+  --dim: #9a9aa3;
+  --accent: #60a5fa;
+  --due: #f87171;
+  --ok: #34d399;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.4 system-ui, sans-serif; }
+body { max-width: 720px; margin: 0 auto; padding: 16px 14px 80px; }
+h1 { font-size: 1.25rem; margin: 0 0 12px; }
+button, input, select, textarea {
+  font: inherit; color: var(--text); background: #252528; border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px;
+}
+button { cursor: pointer; }
+button.primary { background: #1d4ed8; border-color: #1d4ed8; }
+button.ok { background: #166534; border-color: #166534; }
+button.warn { background: #7f1d1d; border-color: #7f1d1d; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+.row input, .row select { flex: 1; min-width: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px 12px; margin: 10px 0; font-size: 0.9rem; color: var(--dim); }
+.task {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 12px; margin: 8px 0;
+}
+.task .name { font-weight: 600; }
+.task.due .name { color: var(--due); }
+.task .meta { color: var(--dim); font-size: 0.85rem; margin-top: 4px; }
+.actions { display: flex; gap: 6px; margin-top: 8px; }
+.actions button { flex: 1; }
+.login { background: var(--card); padding: 16px; border-radius: 12px; }
+.hidden { display: none !important; }
+.status { color: var(--dim); font-size: 0.85rem; min-height: 1.2em; }
+textarea { width: 100%; min-height: 120px; }
